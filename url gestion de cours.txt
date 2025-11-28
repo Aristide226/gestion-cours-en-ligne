@@ -1,0 +1,5 @@
+url gestion de cours : 
+
+Lister les cours : http://localhost:8080/gestion-cours-en-ligne/cours
+
+Ajouter un cours : http://localhost:8080/gestion-cours-en-ligne/cours?action=new
