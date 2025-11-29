@@ -13,14 +13,14 @@ Build Tool|Gestion des dépendances               |Maven
 # 2. Fonctionnalités Implémentées
 Le système supporte deux rôles principaux : Professeur (PROF) et Étudiant (ETUDIANT).
 
-# Sécurité et Accès
-# Authentification : Les utilisateurs se connectent via /login. Le mot de passe et l'email sont vérifiés dans la base de données.
+ Sécurité et Accès
+ Authentification : Les utilisateurs se connectent via /login. Le mot de passe et l'email sont vérifiés dans la base de données.
 
-# Protection des Routes : Le AuthFilter protège l'accès aux ressources /cours et /utilisateurs si l'utilisateur n'a pas de session active.
+ Protection des Routes : Le AuthFilter protège l'accès aux ressources /cours et /utilisateurs si l'utilisateur n'a pas de session active.
 
-# Ouverture d'Inscription : L'accès au formulaire de création d'un nouvel utilisateur (GET /utilisateurs?action=new) et sa soumission (POST /utilisateurs) est public pour permettre l'inscription initiale.
+ Ouverture d'Inscription : L'accès au formulaire de création d'un nouvel utilisateur (GET /utilisateurs?action=new) et sa soumission (POST /utilisateurs) est public pour permettre l'inscription initiale.
 
-# Gestion des Cours
+ Gestion des Cours
 CRUD pour les Cours :
 
 Le rôle PROF a un accès complet aux opérations de Création, Lecture, Mise à jour et Suppression (CUD) des cours.
@@ -40,6 +40,12 @@ Autorisation : Seuls les utilisateurs avec le rôle PROF sont autorisés à acc�
 
 # 3. Structure de la Base de Données
 Les relations N-à-N entre utilisateur et cours sont gérées par la table de liaison inscription.
+
+# URLS
+Connexion : http://localhost:8080/gestion-cours-en-ligne/login
+Lister les cours : http://localhost:8080/gestion-cours-en-ligne/cours
+Ajouter un cours : http://localhost:8080/gestion-cours-en-ligne/cours?action=new
+Ajouter un utilisateur : http://localhost:8080/gestion-cours-en-ligne/utilisateurs?action=new
 
 # Schéma des Tables
 SQL
